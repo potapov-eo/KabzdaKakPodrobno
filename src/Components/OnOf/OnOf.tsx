@@ -4,6 +4,8 @@ import App from '../../App';
 
 type OnPropsType = {
    /* on: boolean*/
+    on:boolean
+    onChange:(on:boolean)=>void
 }
 
 
@@ -18,7 +20,7 @@ function OnOf(props: OnPropsType) {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor: on ? "green" : "red"
+        backgroundColor: props.on ? "green" : "red"
     }
     const onstyle = {
         width: "30px",
@@ -26,7 +28,7 @@ function OnOf(props: OnPropsType) {
         border: "1px solid black",
         display: "inline-block",
         padding: "2px",
-        backgroundColor: on ? "green" : "white"
+        backgroundColor: props.on ? "green" : "white"
 
 
     }
@@ -37,15 +39,15 @@ function OnOf(props: OnPropsType) {
         display: "inline-block",
         marginLeft: "5px",
         padding: "2px",
-        backgroundColor: on ? "white" : "red"
+        backgroundColor: props.on ? "white" : "red"
 
     }
 
 
     return (
         <div>
-            <div style={onstyle} onClick={ () => {setOn(true)}}> ON</div>
-            <div style={ofstyle} onClick={ () => {setOn(false)}}> OFF</div>
+            <div style={onstyle} onClick={ () => {props.onChange(true)}}> ON</div>
+            <div style={ofstyle} onClick={ () => {props.onChange(false)}}> OFF</div>
             <div style={indicatorStyle}></div>
         </div>
     )
