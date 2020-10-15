@@ -5,7 +5,7 @@ import {Rating, RatingValueType} from './Components/Rating/Rating';
 import OnOf from './Components/OnOf/OnOf';
 import UnControlledAccordion from './Components/UnControlledAccordion/UnControlledAccordion';
 import UnControlledRating from './Components/UnControlledRating/UnControledRating';
-import AncontrolledOnOf from './Components/AncontrolledOnOf/AncontrolledOnOf';
+
 
 
 function App() {
@@ -22,12 +22,12 @@ function App() {
             <UnControlledAccordion title={"Accordion title 1"}/>
             <UnControlledAccordion title={"Accordion title 2"}/>*/}
 
-          {/*  <Rating value = {ratingValue} onClick={setRatingValue} />*/}
+            <Rating value = {ratingValue} onClick={setRatingValue} />
 {/*
             <Accordion title={"Accordion title 2"} collapsed ={acordionCollapsed} onChange={()=>{setAcordionCollapsed(!acordionCollapsed)} }/>
 */}
 
-            <AncontrolledOnOf onChange={setswitchOn}/>{switchOn.toString()}
+          {/*  <AncontrolledOnOf onChange={setswitchOn}/>{switchOn.toString()}*/}
             {/*  <AppTitle/>
 
             <Rating value = {3}/>
