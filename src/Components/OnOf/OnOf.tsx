@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import App from '../../App';
 
 
-type OnPropsType = {
+export type OnPropsType = {
    /* on: boolean*/
     on:boolean
     onChange:(on:boolean)=>void
